@@ -59,7 +59,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/JHCat/EoppEngine/build/CMakeFiles/pkgRedirects
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/EoppEngine
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/EoppEngine
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe
@@ -85,7 +85,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Path to a program.
-CMAKE_MT:FILEPATH=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/mt.exe
+CMAKE_MT:FILEPATH=CMAKE_MT-NOTFOUND
 
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
@@ -103,7 +103,7 @@ CMAKE_PROJECT_NAME:STATIC=EoppEngine
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
 
 //RC compiler
-CMAKE_RC_COMPILER:FILEPATH=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x86/rc.exe
+CMAKE_RC_COMPILER:FILEPATH=rc
 
 //Flags for Windows Resource Compiler during all build types.
 CMAKE_RC_FLAGS:STRING=-DWIN32
@@ -168,7 +168,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Users/JHCat/vcpkg/scripts/buildsystems/vcpkg.cmake
+CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Users/JHCat/Downloads/vcpkg-master/vcpkg-master/scripts/buildsystems/vcpkg.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -186,7 +186,7 @@ EoppEngine_IS_TOP_LEVEL:STATIC=ON
 EoppEngine_SOURCE_DIR:STATIC=C:/Users/JHCat/EoppEngine
 
 //The directory containing a CMake configuration file for SDL3.
-SDL3_DIR:PATH=C:/Users/JHCat/vcpkg/installed/x64-windows/share/sdl3
+SDL3_DIR:PATH=C:/Users/JHCat/Downloads/vcpkg-master/vcpkg-master/installed/x64-windows/share/sdl3
 
 //Automatically copy dependencies into the output directory for
 // executables.
@@ -194,7 +194,7 @@ VCPKG_APPLOCAL_DEPS:BOOL=ON
 
 //The directory which contains the installed libraries for each
 // triplet
-VCPKG_INSTALLED_DIR:PATH=C:/Users/JHCat/vcpkg/installed
+VCPKG_INSTALLED_DIR:PATH=C:/Users/JHCat/Downloads/vcpkg-master/vcpkg-master/installed
 
 //The path to the vcpkg manifest directory.
 VCPKG_MANIFEST_DIR:PATH=
@@ -247,10 +247,10 @@ Z_VCPKG_PWSH_PATH:FILEPATH=Z_VCPKG_PWSH_PATH-NOTFOUND
 
 //The directory which contains the installed libraries for each
 // triplet
-_VCPKG_INSTALLED_DIR:PATH=C:/Users/JHCat/vcpkg/installed
+_VCPKG_INSTALLED_DIR:PATH=C:/Users/JHCat/Downloads/vcpkg-master/vcpkg-master/installed
 
 //The directory containing a CMake configuration file for glm.
-glm_DIR:PATH=C:/Users/JHCat/vcpkg/installed/x64-windows/share/glm
+glm_DIR:PATH=C:/Users/JHCat/Downloads/vcpkg-master/vcpkg-master/installed/x64-windows/share/glm
 
 
 ########################
@@ -304,7 +304,7 @@ CMAKE_GENERATOR:INTERNAL=Visual Studio 18 2026
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools
 //Name of generator platform.
-CMAKE_GENERATOR_PLATFORM:INTERNAL=
+CMAKE_GENERATOR_PLATFORM:INTERNAL=x64
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
@@ -398,5 +398,5 @@ Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=OFF
 //The path to the PowerShell implementation to use.
 Z_VCPKG_POWERSHELL_PATH:INTERNAL=C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe
 //Vcpkg root directory
-Z_VCPKG_ROOT_DIR:INTERNAL=C:/Users/JHCat/vcpkg
+Z_VCPKG_ROOT_DIR:INTERNAL=C:/Users/JHCat/Downloads/vcpkg-master/vcpkg-master
 
