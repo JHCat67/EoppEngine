@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\JHCat\EoppEngine\build\CMakeFiles\fa4c48228e11c198b41ad54317372d4d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{49836EE5-9368-316C-B9E4-33F2948425C0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
