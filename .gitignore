@@ -2,3 +2,5 @@ vcpkg/installed/
 vcpkg/buildtrees/
 vcpkg/packages/
 vcpkg/downloads/
+
+build/*
