@@ -11,12 +11,9 @@ file(GLOB_RECURSE ENGINE_SOURCES
     src/*.h
 )
 
-<<<<<<< HEAD
-=======
 list(FILTER ENGINE_SOURCES EXCLUDE REGEX "screenResolutionW.cpp")
 list(FILTER ENGINE_SOURCES EXCLUDE REGEX "screenResolutionL.cpp")
 
->>>>>>> f7da2b78b13dabe30d9c3be938fb84498c9b3c3b
 add_executable(EoppEngine ${ENGINE_SOURCES})
 
 if (WIN32)
