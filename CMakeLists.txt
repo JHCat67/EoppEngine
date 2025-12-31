@@ -14,13 +14,19 @@ file(GLOB_RECURSE ENGINE_SOURCES
 list(FILTER ENGINE_SOURCES EXCLUDE REGEX "screenResolutionW.cpp")
 list(FILTER ENGINE_SOURCES EXCLUDE REGEX "screenResolutionL.cpp")
 
-if (WIN32)
-    list(APPEND ENGINE_SOURCES src/engine/window/screenResolutionW.cpp)
-elseif(UNIX)
-    list(APPEND ENGINE_SOURCES src/engine/window/screenResolutionL.cpp)
-endif()
-
 add_executable(EoppEngine ${ENGINE_SOURCES})
+
+if (WIN32)
+    target_sources(EoppEngine PRIVATE
+        src/engine/window/screenResolutionW.cpp
+    )
+elseif(UNIX AND NOT APPLE)
+    find_package(X11 REQUIRED)
+    target_sources(EoppEngine PRIVATE
+        src/engine/window/screenResolutionL.cpp
+    )
+    target_link_libraries(EoppEngine PRIVATE X11::X11)
+endif()
 
 target_include_directories(EoppEngine PRIVATE include)
 
@@ -34,8 +40,10 @@ target_link_libraries(EoppEngine PRIVATE
     Vulkan::Vulkan
 )
 
-add_custom_command(TARGET EoppEngine POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin
-        $<TARGET_FILE_DIR:EoppEngine>
-)
+if (WIN32)
+    add_custom_command(TARGET EoppEngine POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin
+            $<TARGET_FILE_DIR:EoppEngine>
+    )
+endif()
