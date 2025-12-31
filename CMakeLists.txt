@@ -11,15 +11,6 @@ file(GLOB_RECURSE ENGINE_SOURCES
     src/*.h
 )
 
-list(FILTER ENGINE_SOURCES EXCLUDE REGEX "screenResolutionW.cpp")
-list(FILTER ENGINE_SOURCES EXCLUDE REGEX "screenResolutionL.cpp")
-
-if (WIN32)
-    list(APPEND ENGINE_SOURCES src/engine/window/screenResolutionW.cpp)
-elseif(UNIX)
-    list(APPEND ENGINE_SOURCES src/engine/window/screenResolutionL.cpp)
-endif()
-
 add_executable(EoppEngine ${ENGINE_SOURCES})
 
 target_include_directories(EoppEngine PRIVATE include)
