@@ -23,6 +23,7 @@ target_link_libraries(EoppEngine PRIVATE
     SDL3::SDL3
     glm::glm
     Vulkan::Vulkan
+    dl
 )
 
 if (WIN32)
