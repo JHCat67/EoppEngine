@@ -3,7 +3,7 @@
 Window::Window()
 {
     if (!SDL_Init(SDL_INIT_VIDEO)) {
-        std::cout << "Error initializing SDL" << std::endl;
+        std::cerr << "Error initializing SDL" << SDL_GetError() << std::endl;
     }
 
     SDL_DisplayID displayID = SDL_GetPrimaryDisplay();
