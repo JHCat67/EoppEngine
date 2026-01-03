@@ -19,12 +19,20 @@ find_package(SDL3 REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(Vulkan REQUIRED)
 
-target_link_libraries(EoppEngine PRIVATE
-    SDL3::SDL3
-    glm::glm
-    Vulkan::Vulkan
-    dl
-)
+if (UNIX AND NOT APPLE)
+    target_link_libraries(EoppEngine PRIVATE
+        SDL3::SDL3
+        glm::glm
+        Vulkan::Vulkan
+        dl
+    )
+elseif (WIN32)
+    target_link_libraries(EoppEngine PRIVATE
+        SDL3::SDL3
+        glm::glm
+        Vulkan::Vulkan
+    )
+endif ()
 
 if (WIN32)
     add_custom_command(TARGET EoppEngine POST_BUILD
@@ -32,4 +40,4 @@ if (WIN32)
             ${VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin
             $<TARGET_FILE_DIR:EoppEngine>
     )
-endif()
+endif ()
