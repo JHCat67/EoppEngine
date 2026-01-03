@@ -4,7 +4,12 @@
     "dependencies": [
         {
             "name": "sdl3",
-            "features": ["vulkan", "wayland", "x11", "ibus"]
+            "features": ["vulkan", "wayland", "x11", "ibus"],
+            "platform": "linux"
+        },
+        {
+            "name": "sdl3",
+            "features": ["vulkan"]
         },
         "glm",
         "vulkan-headers",
