@@ -7,11 +7,15 @@
 #include <glm/gtc/quaternion.hpp>
 #include "engine/window/window.hpp"
 #include "engine/input/processInput.hpp"
+#include "engine/vulkan/createInstance.hpp"
 
 int main() {
     bool loopIsRunning = true;
     Window window; // Creates a window
-    ProcessInput handleInput; // Creates a messageloop which handles all incoming keypresses.
+    CreateInstance createInstance;
+    ProcessInput handleInput; // Creates a input loop which handles all incoming keypresses.
+
+    createInstance.createInstance(&window);
 
     while (loopIsRunning) {
         Uint64 start = SDL_GetPerformanceCounter();
