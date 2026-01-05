@@ -2,6 +2,7 @@
 
 Window::Window()
 {
+    std::cout << "HI" << std::endl;
     if (!SDL_Init(SDL_INIT_VIDEO)) {
         std::cerr << "Error initializing SDL" << SDL_GetError() << std::endl;
     }

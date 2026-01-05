@@ -5,6 +5,8 @@
 #include <SDL3/SDL_video.h>
 #include <vulkan/vulkan.h>
 
+class InitVulkan;
+
 class Window {
     public:
     SDL_Window* window;
